@@ -11,8 +11,8 @@ Both screens contains logic to loading when we do api calls and error handling w
 The app contain unit tests, for api layer and for the viewModels(both have more then 80% of coverage)
 
 
-![List](/Users/miguel.costa/Desktop/12.png)
-![Detail](/Users/miguel.costa/Desktop/11.png)
+![List](https://ibb.co/WpGkR2D)
+![Detail](https://ibb.co/jTZchTd)
 
 # Project Paths
 StocksNetwork Path: is the layer that contains the nertwork logic to do requests across the app
