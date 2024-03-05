@@ -23,6 +23,7 @@ struct StockListScreen: View {
                         .frame(height: 30)
                 case .loaded, .refresh:
                     listStocksView()
+                        .background(.black)
                 case .error:
                     Button("Retry", action: {
                         performFetchStocks()
@@ -37,7 +38,7 @@ struct StockListScreen: View {
             .refreshable {
                 performFetchStocks(.refresh)
             }
-            .background(.black)
+           
         }
     }
 

@@ -22,6 +22,7 @@ struct StocksLinearChartData: Identifiable {
 
 struct StocksLinearChartView: View {
     @State private var rawSelectedDate: Date? = nil
+    @State private var lastValue: Double = 0.0
 
     var data: [StocksLinearChartData]
     var chartUnit: Calendar.Component
@@ -59,17 +60,19 @@ struct StocksLinearChartView: View {
         }
     }
 
-    var selectedDateValue: Double? {
+    var selectedDateValue: Double {
         if let rawSelectedDate = rawSelectedDate {
             let calendar = Calendar.current
-            if let dataEntry = data.first(where: { entry in
-                return calendar.isDate(entry.date, equalTo: rawSelectedDate, toGranularity: .day)
-            }) {
-                return dataEntry.value
+            for entry in data {
+                if calendar.isDate(entry.date,
+                                   equalTo: rawSelectedDate,
+                                   toGranularity: chartUnit) {
+                    return entry.value
+                }
             }
         }
-        return nil
 
+        return lastValue
     }
 
     var body: some View {
@@ -120,19 +123,19 @@ struct StocksLinearChartView: View {
 
     @ViewBuilder
     var selectionPopover: some View {
-
-        if let selectedDateValue {
             VStack {
                 Text("Value: \(selectedDateValue.formatNumber())")
                     .bold()
                     .foregroundStyle(.black)
                     .padding(.all, PaddingConstants.xxs)
+                    .onAppear {
+                        lastValue = selectedDateValue
+                    }
             }
             .padding(PaddingConstants.xxs)
             .background {
                 RoundedRectangle(cornerRadius: 4)
                     .fill(.white)
             }
-        }
     }
 }
