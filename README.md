@@ -12,8 +12,7 @@ The app contain unit tests, for api layer and for the viewModels(both have more 
 
 <img width="30px" src="https://ibb.co/WpGkR2D" alt="image_name png" />
 <img href="https://ibb.co/WpGkR2D"><img src="https://i.ibb.co/WpGkR2D/12.png" alt="12" border="0" /></img>
-![List](https://ibb.co/WpGkR2D)
-![Detail](https://ibb.co/jTZchTd)
+<img href="https://ibb.co/WpGkR2D"><img src="https://i.ibb.co/WpGkR2D/12.png" alt="12" border="0" /></img>
 
 # Project Paths
 StocksNetwork Path: is the layer that contains the nertwork logic to do requests across the app
