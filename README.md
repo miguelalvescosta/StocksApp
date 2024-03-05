@@ -10,8 +10,9 @@ Both screens contains logic to loading when we do api calls and error handling w
 
 The app contain unit tests, for api layer and for the viewModels(both have more then 80% of coverage)
 
-![List](/Users/miguel.costa/Desktop/Simulator Screenshot - iPhone 15 Pro - 2024-03-05 at 22.05.14.png)
-![Detail](/Users/miguel.costa/Desktop/Simulator Screenshot - iPhone 15 Pro - 2024-03-05 at 22.05.21.png)
+
+![List](/Users/miguel.costa/Desktop/12.png)
+![Detail](/Users/miguel.costa/Desktop/11.png)
 
 # Project Paths
 StocksNetwork Path: is the layer that contains the nertwork logic to do requests across the app
