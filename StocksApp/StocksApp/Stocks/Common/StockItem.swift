@@ -56,7 +56,7 @@ struct StockItem: StockItemProtocol, Identifiable, Hashable {
         return "CH\(randomIsin)"
     }
     
-    init(quotes: QuotesModel) {
+    init(quotes: QuotesResultModel) {
         self.symbol = quotes.symbol
         self.shortName = quotes.shortName ?? ""
         self.fullName = quotes.longName ?? ""

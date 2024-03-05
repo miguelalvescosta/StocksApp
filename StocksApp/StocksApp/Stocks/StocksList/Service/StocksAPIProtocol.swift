@@ -9,7 +9,7 @@ import Foundation
 
 protocol StocksAPIProtocol {
     func fetchStocks(_ request: StocksRequest) async throws -> ResultResponse<StocksModel>
-    func fetchQuotes(_ request: StocksRequest) async throws -> ResultResponse<Quote>
+    func fetchQuotes(_ request: StocksRequest) async throws -> ResultResponse<QuoteModel>
 }
 struct StocksModel: Decodable {
     let marketSummaryAndSparkResponse: MarketSummary
@@ -23,15 +23,15 @@ struct StocksSymbol: Decodable {
     let symbol: String
 }
 
-struct Quote: Decodable {
+struct QuoteModel: Decodable {
     let quoteResponse: QuoteResponse
 }
 
 struct QuoteResponse: Decodable {
-    let result: [QuotesModel]
+    let result: [QuotesResultModel]
 }
 
-struct QuotesModel: Decodable {
+struct QuotesResultModel: Decodable {
     let regularMarketChange, regularMarketChangePercent, regularMarketPrice: Double
     let regularMarketDayLow, regularMarketDayHigh, regularMarketOpen: Double
     let fiftyTwoWeekLow, fiftyTwoWeekHigh, averageDailyVolume10Day: Double

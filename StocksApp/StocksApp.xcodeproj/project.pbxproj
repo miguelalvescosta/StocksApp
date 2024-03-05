@@ -12,8 +12,6 @@
 		9EB01F9A2B95CA1700D26366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB01F992B95CA1700D26366 /* Assets.xcassets */; };
 		9EB01F9D2B95CA1700D26366 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB01F9C2B95CA1700D26366 /* Preview Assets.xcassets */; };
 		9EB01FA72B95CA1700D26366 /* StocksAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB01FA62B95CA1700D26366 /* StocksAppTests.swift */; };
-		9EB01FB12B95CA1700D26366 /* StocksAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB01FB02B95CA1700D26366 /* StocksAppUITests.swift */; };
-		9EB01FB32B95CA1700D26366 /* StocksAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB01FB22B95CA1700D26366 /* StocksAppUITestsLaunchTests.swift */; };
 		9EB01FC32B95CCB800D26366 /* APIErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB01FC22B95CCB800D26366 /* APIErrorResponse.swift */; };
 		9EB01FC52B95CCCC00D26366 /* ResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB01FC42B95CCCC00D26366 /* ResultResponse.swift */; };
 		9EB01FC82B95CCEB00D26366 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB01FC72B95CCEB00D26366 /* APIRequest.swift */; };
@@ -47,17 +45,12 @@
 		9EB0200E2B977CF800D26366 /* APIRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB0200D2B977CF800D26366 /* APIRequestMock.swift */; };
 		9EB020102B977DA800D26366 /* APIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB0200F2B977DA800D26366 /* APIServiceMock.swift */; };
 		9EB020122B977DC200D26366 /* APIUrlMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB020112B977DC200D26366 /* APIUrlMock.swift */; };
+		9EB020152B97A18300D26366 /* StocksListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB020142B97A18300D26366 /* StocksListTests.swift */; };
+		9EB020182B97AB8A00D26366 /* StocksDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB020172B97AB8A00D26366 /* StocksDetailsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		9EB01FA32B95CA1700D26366 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9EB01F8A2B95CA1500D26366 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9EB01F912B95CA1500D26366;
-			remoteInfo = StocksApp;
-		};
-		9EB01FAD2B95CA1700D26366 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9EB01F8A2B95CA1500D26366 /* Project object */;
 			proxyType = 1;
@@ -74,9 +67,6 @@
 		9EB01F9C2B95CA1700D26366 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9EB01FA22B95CA1700D26366 /* StocksAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StocksAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB01FA62B95CA1700D26366 /* StocksAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksAppTests.swift; sourceTree = "<group>"; };
-		9EB01FAC2B95CA1700D26366 /* StocksAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StocksAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EB01FB02B95CA1700D26366 /* StocksAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksAppUITests.swift; sourceTree = "<group>"; };
-		9EB01FB22B95CA1700D26366 /* StocksAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9EB01FC22B95CCB800D26366 /* APIErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorResponse.swift; sourceTree = "<group>"; };
 		9EB01FC42B95CCCC00D26366 /* ResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultResponse.swift; sourceTree = "<group>"; };
 		9EB01FC72B95CCEB00D26366 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
@@ -110,6 +100,8 @@
 		9EB0200D2B977CF800D26366 /* APIRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestMock.swift; sourceTree = "<group>"; };
 		9EB0200F2B977DA800D26366 /* APIServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceMock.swift; sourceTree = "<group>"; };
 		9EB020112B977DC200D26366 /* APIUrlMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrlMock.swift; sourceTree = "<group>"; };
+		9EB020142B97A18300D26366 /* StocksListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksListTests.swift; sourceTree = "<group>"; };
+		9EB020172B97AB8A00D26366 /* StocksDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksDetailsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,13 +119,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EB01FA92B95CA1700D26366 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -142,7 +127,6 @@
 			children = (
 				9EB01F942B95CA1500D26366 /* StocksApp */,
 				9EB01FA52B95CA1700D26366 /* StocksAppTests */,
-				9EB01FAF2B95CA1700D26366 /* StocksAppUITests */,
 				9EB01F932B95CA1500D26366 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,7 +136,6 @@
 			children = (
 				9EB01F922B95CA1500D26366 /* StocksApp.app */,
 				9EB01FA22B95CA1700D26366 /* StocksAppTests.xctest */,
-				9EB01FAC2B95CA1700D26366 /* StocksAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,19 +165,11 @@
 		9EB01FA52B95CA1700D26366 /* StocksAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				9EB020132B97A16D00D26366 /* StocksTests */,
 				9EB0200A2B977CBD00D26366 /* APITests */,
 				9EB01FA62B95CA1700D26366 /* StocksAppTests.swift */,
 			);
 			path = StocksAppTests;
-			sourceTree = "<group>";
-		};
-		9EB01FAF2B95CA1700D26366 /* StocksAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9EB01FB02B95CA1700D26366 /* StocksAppUITests.swift */,
-				9EB01FB22B95CA1700D26366 /* StocksAppUITestsLaunchTests.swift */,
-			);
-			path = StocksAppUITests;
 			sourceTree = "<group>";
 		};
 		9EB01FBF2B95CC7B00D26366 /* Common */ = {
@@ -354,6 +329,15 @@
 			path = APITests;
 			sourceTree = "<group>";
 		};
+		9EB020132B97A16D00D26366 /* StocksTests */ = {
+			isa = PBXGroup;
+			children = (
+				9EB020142B97A18300D26366 /* StocksListTests.swift */,
+				9EB020172B97AB8A00D26366 /* StocksDetailsTests.swift */,
+			);
+			path = StocksTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -392,24 +376,6 @@
 			productReference = 9EB01FA22B95CA1700D26366 /* StocksAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9EB01FAB2B95CA1700D26366 /* StocksAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9EB01FBC2B95CA1700D26366 /* Build configuration list for PBXNativeTarget "StocksAppUITests" */;
-			buildPhases = (
-				9EB01FA82B95CA1700D26366 /* Sources */,
-				9EB01FA92B95CA1700D26366 /* Frameworks */,
-				9EB01FAA2B95CA1700D26366 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9EB01FAE2B95CA1700D26366 /* PBXTargetDependency */,
-			);
-			name = StocksAppUITests;
-			productName = StocksAppUITests;
-			productReference = 9EB01FAC2B95CA1700D26366 /* StocksAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -424,10 +390,6 @@
 						CreatedOnToolsVersion = 15.1;
 					};
 					9EB01FA12B95CA1700D26366 = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = 9EB01F912B95CA1500D26366;
-					};
-					9EB01FAB2B95CA1700D26366 = {
 						CreatedOnToolsVersion = 15.1;
 						TestTargetID = 9EB01F912B95CA1500D26366;
 					};
@@ -448,7 +410,6 @@
 			targets = (
 				9EB01F912B95CA1500D26366 /* StocksApp */,
 				9EB01FA12B95CA1700D26366 /* StocksAppTests */,
-				9EB01FAB2B95CA1700D26366 /* StocksAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -464,13 +425,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9EB01FA02B95CA1700D26366 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9EB01FAA2B95CA1700D26366 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -522,20 +476,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EB020182B97AB8A00D26366 /* StocksDetailsTests.swift in Sources */,
 				9EB020122B977DC200D26366 /* APIUrlMock.swift in Sources */,
 				9EB020102B977DA800D26366 /* APIServiceMock.swift in Sources */,
+				9EB020152B97A18300D26366 /* StocksListTests.swift in Sources */,
 				9EB0200E2B977CF800D26366 /* APIRequestMock.swift in Sources */,
 				9EB01FA72B95CA1700D26366 /* StocksAppTests.swift in Sources */,
 				9EB0200C2B977CD400D26366 /* NetworkRequesterTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9EB01FA82B95CA1700D26366 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9EB01FB12B95CA1700D26366 /* StocksAppUITests.swift in Sources */,
-				9EB01FB32B95CA1700D26366 /* StocksAppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,11 +493,6 @@
 			isa = PBXTargetDependency;
 			target = 9EB01F912B95CA1500D26366 /* StocksApp */;
 			targetProxy = 9EB01FA32B95CA1700D26366 /* PBXContainerItemProxy */;
-		};
-		9EB01FAE2B95CA1700D26366 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9EB01F912B95CA1500D26366 /* StocksApp */;
-			targetProxy = 9EB01FAD2B95CA1700D26366 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -768,40 +710,6 @@
 			};
 			name = Release;
 		};
-		9EB01FBD2B95CA1700D26366 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = miguel.StocksAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = StocksApp;
-			};
-			name = Debug;
-		};
-		9EB01FBE2B95CA1700D26366 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = miguel.StocksAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = StocksApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -828,15 +736,6 @@
 			buildConfigurations = (
 				9EB01FBA2B95CA1700D26366 /* Debug */,
 				9EB01FBB2B95CA1700D26366 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9EB01FBC2B95CA1700D26366 /* Build configuration list for PBXNativeTarget "StocksAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9EB01FBD2B95CA1700D26366 /* Debug */,
-				9EB01FBE2B95CA1700D26366 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

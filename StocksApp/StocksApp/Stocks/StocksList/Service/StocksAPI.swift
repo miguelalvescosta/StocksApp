@@ -18,7 +18,7 @@ final class StocksAPI: StocksAPIProtocol {
         return try await networkRequester.doRequest(request: request)
     }
 
-    func fetchQuotes(_ request: StocksRequest) async throws -> ResultResponse<Quote> {
+    func fetchQuotes(_ request: StocksRequest) async throws -> ResultResponse<QuoteModel> {
         return try await networkRequester.doRequest(request: request)
     }
 }
