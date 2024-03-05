@@ -10,7 +10,7 @@ Both screens contains logic to loading when we do api calls and error handling w
 
 The app contain unit tests, for api layer and for the viewModels(both have more then 80% of coverage)
 
-<img href="https://ibb.co/WpGkR2D"><img src="https://i.ibb.co/WpGkR2D/12.png" alt="12" border="0" /></img>
+<img href="https://ibb.co/WpGkR2D"><img src="https://i.ibb.co/S75tZ3Q/12.png" alt="12" border="0" /></img>
 <img href="https://ibb.co/jTZchTd"><img src="https://i.ibb.co/37YD17w/11.png" alt="11" border="0" /></img>
 
 # Project Paths
