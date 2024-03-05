@@ -1,5 +1,5 @@
 //
-//  StocksAPI.swift
+//  StocksDetailAPI.swift
 //  StocksApp
 //
 //  Created by Miguel Costa on 04.03.24.
@@ -7,18 +7,16 @@
 
 import Foundation
 
-final class StocksAPI: StocksAPIProtocol {
+final class StocksDetailAPI: StocksDetailAPIProtocol {
+
     private let networkRequester: NetworkRequester
 
     init(networkRequester: NetworkRequester = .init()) {
         self.networkRequester = networkRequester
     }
 
-    func fetchStocks(_ request: StocksRequest) async throws -> ResultResponse<StocksModel> {
+    func fetchStockChart(_ request: StocksDetailRequest) async throws -> ResultResponse<StockChartModel> {
         return try await networkRequester.doRequest(request: request)
     }
 
-    func fetchQuotes(_ request: StocksRequest) async throws -> ResultResponse<Quote> {
-        return try await networkRequester.doRequest(request: request)
-    }
 }

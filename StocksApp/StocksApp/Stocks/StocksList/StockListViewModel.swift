@@ -11,6 +11,7 @@ enum StockListState: Equatable {
     case initial
     case loading
     case loaded
+    case refresh
     case error
 }
 
@@ -20,15 +21,15 @@ class StockListViewModel: ObservableObject {
 
     private let service: StocksAPIProtocol
     var stocksSymbol: [String]?
-    var stocksList: [StockItem]?
+    var stocksList: [StockItem] = []
 
     init(service: StocksAPIProtocol = StocksAPI()) {
         self.service = service
     }
 
     @MainActor
-    public func fetchStocks() async {
-        state = .loading
+    public func fetchStocks(_ state: StockListState = .loading) async {
+        self.state = state
 
         do {
             let result = try await service.fetchStocks(StocksRequest.summary)
@@ -37,7 +38,7 @@ class StockListViewModel: ObservableObject {
             case let .success(response):
                 stocksSymbol = response.marketSummaryAndSparkResponse.result.map { $0.symbol }
             case .failure(_):
-                    self.state = .error
+                self.state = .error
             }
         } catch {
             self.state = .error
@@ -48,13 +49,13 @@ class StockListViewModel: ObservableObject {
     public func fetchQuotes() async {
         do {
             let result = try await service.fetchQuotes(StocksRequest.quotes(stocksSymbol ?? []))
-
+            
             switch result {
             case let .success(response):
                 stocksList = response.quoteResponse.result.map { StockItem(quotes: $0) }
                 self.state = .loaded
             case .failure(_):
-                    self.state = .error
+                self.state = .error
             }
         } catch {
             self.state = .error

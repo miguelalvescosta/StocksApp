@@ -8,7 +8,7 @@
 import SwiftUI
 struct StockListItemView: View {
     private let item: StockItemProtocol
-    
+
     var regularMarketChangeColor: Color {
         item.isNegativeMarketValue ? .red : .green
     }
@@ -41,12 +41,12 @@ struct StockListItemView: View {
                 Text(item.regularMarketChange)
                     .font(.caption.weight(.semibold))
                     .foregroundColor(.white)
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 10)
+                    .padding(.horizontal, PaddingConstants.xl)
+                    .padding(.vertical, PaddingConstants.xs)
                     .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(regularMarketChangeColor)
-                        )
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(regularMarketChangeColor)
+                    )
             }
         }.padding()
     }

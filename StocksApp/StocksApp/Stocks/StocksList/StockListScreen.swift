@@ -8,38 +8,42 @@
 import SwiftUI
 
 struct StockListScreen: View {
-    @Environment(\.locale) private var locale
     @ObservedObject private var viewModel: StockListViewModel
-    @State private var name = ""
-    private let gridSpacing: CGFloat = 16
+
     init(viewModel: StockListViewModel = .init()) {
         self.viewModel = viewModel
     }
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 switch viewModel.state {
-                case .initial:
+                case .initial, .loading:
                     ProgressView()
-                case .loaded:
+                        .background(.white)
+                        .frame(height: 30)
+                case .loaded, .refresh:
                     listStocksView()
                 case .error:
                     Button("Retry", action: {
                         performFetchStocks()
                     })
-                default:
-                    EmptyView()
                 }
             }.onAppear {
-                performFetchStocks()
+                UIRefreshControl.appearance().tintColor = .white
+                if viewModel.stocksList.isEmpty {
+                    performFetchStocks()
+                }
+            }
+            .refreshable {
+                performFetchStocks(.refresh)
             }
             .background(.black)
         }
     }
 
-    private func performFetchStocks() {
+    private func performFetchStocks(_ state: StockListState = .loading) {
         Task {
-            await viewModel.fetchStocks()
+            await viewModel.fetchStocks(state)
             await viewModel.fetchQuotes()
         }
     }
@@ -47,12 +51,12 @@ struct StockListScreen: View {
     private func listStocksView() -> some View {
         ScrollView {
             VStack {
-                if let items = viewModel.stocksList {
-                    ForEach(items) { item in
+                ForEach(viewModel.stocksList) { item in
+                    NavigationLink(destination: NavigationLazyView(StockDetailScreen(viewModel: .init(stockItem: item)))) {
                         StockListItemView(item: item)
-                        Divider()
-                            .background(Color.white)
                     }
+                    Divider()
+                        .background(.white)
                 }
             }
             .padding()

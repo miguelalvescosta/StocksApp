@@ -32,12 +32,12 @@ extension StocksRequest: APIRequest {
     var queryItems: [URLQueryItem]? {
         switch self {
         case .summary:
-                return
+            return
             [
                 URLQueryItem(name: "region", value: REGION)
             ]
         case let .quotes(symbols):
-                return
+            return
             [
                 URLQueryItem(name: "region", value: REGION),
                 URLQueryItem(name: "symbols", value: symbols.joined(separator: ","))
