@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct StockDetailScreen: View {
+    let chartViewHeight: CGFloat = 200
+    let stockInfoHeight: CGFloat = 80
+    let chartProgressViewHeight: CGFloat = 30
 
     @ObservedObject private var viewModel: StockDetailViewModel
 
@@ -21,9 +24,7 @@ struct StockDetailScreen: View {
             ZStack {
                 switch viewModel.state {
                 case .initial, .loading:
-                    ProgressView()
-                        .background(Color.white)
-                        .frame(height: 30)
+                    StocksLoadingView()
                 case .loaded, .chartLoading:
                     VStack {
                         headerInfoView
@@ -47,7 +48,7 @@ struct StockDetailScreen: View {
                         Spacer()
                     }.background(.black)
                 case .error:
-                    Button("Retry", action: {
+                    StocksErrorView(retryAction: {
                         performFetchData()
                     })
                 }
@@ -76,12 +77,12 @@ struct StockDetailScreen: View {
                 Spacer()
                 ProgressView()
                     .tint(.white)
-                    .frame(height: 20)
+                    .frame(height: chartProgressViewHeight)
                 Spacer()
-            }
+            }.frame(height: chartViewHeight)
         } else {
             StocksLinearChartView(data: viewModel.chartData, chartUnit: viewModel.chartUnit)
-                .frame(height: 200)
+                .frame(height: chartViewHeight)
                 .padding(.horizontal, PaddingConstants.xs)
                 .padding(.top, PaddingConstants.xs)
         }
@@ -131,7 +132,7 @@ struct StockDetailScreen: View {
             StockInfoWidgetView(items: viewModel.stockInfoFirstColumn)
             Divider()
                 .background(.white)
-                .frame(height: 80)
+                .frame(height: stockInfoHeight)
             StockInfoWidgetView(items: viewModel.stockInfoSecondColumn)
             Spacer()
         }.frame(maxWidth: .infinity, alignment: .leading)

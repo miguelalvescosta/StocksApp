@@ -23,6 +23,8 @@ struct StocksLinearChartData: Identifiable {
 struct StocksLinearChartView: View {
     @State private var rawSelectedDate: Date? = nil
     @State private var lastValue: Double = 0.0
+    let radius: CGFloat = 4
+    let ruleMarkY: CGFloat = -10
 
     var data: [StocksLinearChartData]
     var chartUnit: Calendar.Component
@@ -71,7 +73,6 @@ struct StocksLinearChartView: View {
                 }
             }
         }
-
         return lastValue
     }
 
@@ -88,8 +89,8 @@ struct StocksLinearChartView: View {
                     RuleMark(x: .value("Selected",
                                        rawSelectedDate,
                                        unit: chartUnit))
-                    .foregroundStyle(Color.gray.opacity(0.3))
-                    .offset(yStart: -10)
+                    .foregroundStyle(.gray.opacity(0.3))
+                    .offset(yStart: ruleMarkY)
                     .zIndex(-1)
                     .annotation(
                         position: .top,
@@ -134,7 +135,7 @@ struct StocksLinearChartView: View {
             }
             .padding(PaddingConstants.xxs)
             .background {
-                RoundedRectangle(cornerRadius: 4)
+                RoundedRectangle(cornerRadius: radius)
                     .fill(.white)
             }
     }

@@ -14,6 +14,7 @@ struct StockInfoWidgetItem: Identifiable {
 }
 
 struct StockInfoWidgetView: View {
+    let height: CGFloat = 100
     let items: [StockInfoWidgetItem]
 
     var body: some View {
@@ -30,6 +31,6 @@ struct StockInfoWidgetView: View {
                 }
             }
         }
-        .frame(height: 100)
+        .frame(height: height)
     }
 }

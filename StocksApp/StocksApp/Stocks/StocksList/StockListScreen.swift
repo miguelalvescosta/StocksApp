@@ -18,14 +18,12 @@ struct StockListScreen: View {
             ZStack {
                 switch viewModel.state {
                 case .initial, .loading:
-                    ProgressView()
-                        .background(.white)
-                        .frame(height: 30)
+                    StocksLoadingView()
                 case .loaded, .refresh:
                     listStocksView()
                         .background(.black)
                 case .error:
-                    Button("Retry", action: {
+                    StocksErrorView(retryAction: {
                         performFetchStocks()
                     })
                 }
@@ -38,7 +36,7 @@ struct StockListScreen: View {
             .refreshable {
                 performFetchStocks(.refresh)
             }
-           
+
         }
     }
 
