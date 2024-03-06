@@ -68,6 +68,7 @@ struct StockDetailScreen: View {
         }
         .pickerStyle(.segmented)
         .padding(.top, PaddingConstants.xl)
+        .padding(.horizontal, PaddingConstants.xs)
     }
 
     @ViewBuilder
@@ -135,7 +136,9 @@ struct StockDetailScreen: View {
                 .frame(height: stockInfoHeight)
             StockInfoWidgetView(items: viewModel.stockInfoSecondColumn)
             Spacer()
-        }.frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, PaddingConstants.xs)
     }
 
     private func performFetchData() {
